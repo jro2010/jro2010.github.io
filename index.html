@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jromaña - Mis Mapas LAC</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* ====== Estilos generales ====== */
+    body {
+      font-family: Arial, sans-serif;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.45);
+      z-index: 0;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      padding: 2rem;
+    }
+
+    img[alt="Jromaña"] {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ====== Selector de idioma ====== */
+    .idioma-selector {
+      margin-bottom: 1.5rem;
+    }
+
+    .idioma-selector button {
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      color: white;
+      font-size: 1.1rem;
+      margin: 0 0.5rem;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .idioma-selector button:hover {
+      background: rgba(255,255,255,0.3);
+      transform: scale(1.05);
+    }
+
+    .idioma-selector img {
+      width: 28px;
+      height: 20px;
+      border-radius: 3px;
+      object-fit: cover;
+    }
+
+    /* ====== Botones de redes ====== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      margin: 0.5rem;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: opacity 0.3s, transform 0.2s;
+    }
+
+    .btn:hover {
+      opacity: 0.8;
+      transform: scale(1.05);
+    }
+
+    .youtube { background-color: #ff0000; }
+    .discord { background-color: #7289da; }
+    .reddit { background-color: #ff4500; }
+
+    /* ====== Tarjetas de mapas ====== */
+    .mapas-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .mapa-tarjeta {
+      background: rgba(255,255,255,0.1);
+      border-radius: 10px;
+      padding: 1rem;
+      width: 260px;
+      margin: 1rem;
+      text-align: center;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    .mapa-tarjeta img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 0.5rem;
+      border: 2px solid #fff;
+    }
+
+    .mapa-tarjeta h3 {
+      margin: 0.5rem 0;
+      font-size: 1.3rem;
+    }
+
+    .mapa-tarjeta p {
+      margin: 0.3rem 0;
+      font-size: 0.9rem;
+      color: #ddd;
+    }
+
+    .mapa-btn {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+      font-size: 0.9rem;
+    }
+
+    .mapa-btn:hover {
+      background-color: #45a049;
+    }
+
+    /* ====== Pie de página ====== */
+    footer {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #ccc;
+      padding-bottom: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      .mapa-tarjeta {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <img src="https://cuty.io/storage/logos/q3yNVFOSS6ca31thpzBJy67OrgRBbn2ZF4v3TQ8s.jpg" alt="Jromaña">
+    <h1 id="titulo">Jromaña</h1>
+
+    <!-- Texto de bienvenida -->
+    <p id="bienvenida">
+      ¡Hola! Soy <strong>Jromaña</strong>, creador de contenido y amante de los juegos.  
+      En mi canal de <strong>YouTube</strong> encontrarás videos sobre <strong>Los Ángeles Crimes (LAC)</strong>, 
+      y próximamente también contenido sobre <strong>Polyfield</strong>.  
+      Me gusta crear mapas, experimentar con el juego y compartirlos con mi comunidad.  
+      ¡Gracias por visitar mi sitio web, donde podrás encontrar mis proyectos, redes y descargas oficiales!
+    </p>
+
+    <!-- Selector de idioma con banderas HD -->
+    <div class="idioma-selector">
+      <button onclick="cambiarIdioma('es')">
+        <img src="https://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg" alt="España"> Español
+      </button>
+      <button onclick="cambiarIdioma('en')">
+        <img src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" alt="USA"> English
+      </button>
+    </div>
+
+    <!-- Botones de redes -->
+    <a href="https://youtube.com/@jro2035?si=KDQUYiSnNoGwPPiV" class="btn youtube" target="_blank">
+      <i class="fab fa-youtube"></i> YouTube
+    </a>
+    <a href="https://discord.gg/yfCSDKQ44k" class="btn discord" target="_blank">
+      <i class="fab fa-discord"></i> Discord
+    </a>
+    <a href="https://www.reddit.com/u/usuario_54/s/5MeFCyl8XP" class="btn reddit" target="_blank">
+      <i class="fab fa-reddit"></i> Reddit
+    </a>
+
+    <!-- Apartado de Mapas -->
+    <section class="mapas">
+      <h2 id="mapas-titulo">Mis Mapas LAC</h2>
+      <div class="mapas-container">
+        <div class="mapa-tarjeta">
+          <img src="latamv1.png" alt="Mapa LatamV1">
+          <h3>LatamV1</h3>
+          <p>Fecha: 06/07/2025</p>
+          <button class="mapa-btn" onclick="copiarURL('maps/latamv1.txt')">Copiar URL</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+      © 2025 Todos los derechos reservados a <strong>ROMAÑA</strong>.
+    </footer>
+  </div>
+
+  <script>
+    // Copiar URL del mapa
+    function copiarURL(ruta) {
+      const url = window.location.origin + '/' + ruta;
+      navigator.clipboard.writeText(url)
+        .then(() => alert('✅ URL copiada: ' + url))
+        .catch(() => alert('❌ Error al copiar la URL'));
+    }
+
+    // Textos por idioma
+    const textos = {
+      es: {
+        titulo: "Jromaña",
+        bienvenida: "¡Hola! Soy Jromaña, creador de contenido y amante de los juegos. En mi canal de YouTube encontrarás videos sobre Los Ángeles Crimes (LAC), y próximamente también sobre Polyfield. Me gusta crear mapas y compartirlos con mi comunidad. ¡Gracias por visitar mi web!",
+        mapas: "Mis Mapas LAC"
+      },
+      en: {
+        titulo: "Jromaña",
+        bienvenida: "Hi! I'm Jromaña, content creator and gaming enthusiast. On my YouTube channel you’ll find videos about Los Angeles Crimes (LAC), and soon also about Polyfield. I enjoy creating maps and sharing them with my community. Thanks for visiting my site!",
+        mapas: "My LAC Maps"
+      }
+    };
+
+    // Cambiar idioma
+    function cambiarIdioma(idioma) {
+      document.getElementById('titulo').textContent = textos[idioma].titulo;
+      document.getElementById('bienvenida').textContent = textos[idioma].bienvenida;
+      document.getElementById('mapas-titulo').textContent = textos[idioma].mapas;
+    }
+  </script>
+</body>
+</html>
